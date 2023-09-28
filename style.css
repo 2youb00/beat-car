@@ -338,9 +338,9 @@ padding-top: 1rem;
     position: relative;
 }
 .smaller-shape{
-   position: absolute;
-   top: -2.5rem;
-   left: -2.5rem;
+    position: absolute;
+   /* top: -2.5rem;
+    left: -2.5rem;*/
    
 }
 
@@ -366,19 +366,22 @@ padding-top: 1rem;
     grid-template-columns: repeat(2,max-content);
     gap :0.5rem 1.25rem;
     margin-bottom: 2rem;
+  
 }
 .popular-data-group{
     display: inline-flex;
     align-items: center;
-    font-size: 0.836rem;
+    font-size: 0.75rem;
     column-gap: 0.5rem;
     color: white;
 }
 .popular-data i{
-    font-size: 1rem;
+    font-size: 0.9rem;
+    
 }
 .popular-price{
     font-size: 1rem;
+    margin-right: 1rem;
 }
 .popular-button{
     position: absolute;
@@ -401,13 +404,19 @@ padding-top: 1rem;
 .swiper-wrapper{
     margin-left:2rem;
 }
+.swiper-pagination-bullet-active-main{
+    background: white; 
+}
+.sss{
+    color: white;
+    background-color: white;
+    background: white;
+}
 .swiper-pagination-bullet{
-    background: white
+    color: aliceblue;
+    background: white;
 }
 
-.swiper-pagination-bullet-active {
-    background-color: #4178dc; 
-}
 /*================================popular end======================================*/
 /*================================features======================================*/
 .features{
@@ -467,3 +476,108 @@ padding-top: 1rem;
     margin: auto;
     transform: rotate(-22deg);
    }
+
+
+
+
+/*================================end features======================================*/
+/*================================featured======================================*/
+.featured-card{
+  text-transform: capitalize;
+}
+.featured-container{
+    padding-top: 1rem;
+}
+.featured-filters{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1rem;
+    margin-bottom: 3.5rem;
+}
+.featured-item{
+    width: 48px;
+    height: 48px;
+    border: none;
+    outline: none;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    background-color: hsl(219,4%, 7%);
+    color: white;
+    font-size: 0.935rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.featured-item img{
+    width: 1.5rem;
+}
+.featured-item img , .featured-item span{
+opacity: 0.3;
+transition: 0.3s;
+
+}
+.featured-item:hover{
+background-color: #4178dc;
+
+}
+.featured-item:hover img , .featured-item:hover span{
+    opacity: 1;
+}
+.featured-content{
+    grid-template-columns: 286px;
+    grid-column: 2.5rem;
+    justify-content: center;
+}
+.featured-card{
+    position: relative;
+    background-color: hsl(219,4%, 7%);
+    padding: 2rem 1.5rem 1.5rem
+}
+.featured .smaller-shape{
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+.featured-img , .featured-title ,.featured-subtitle{
+    position: relative;
+}
+.featured-title{
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+.featured-subtitle{
+    color: hsl(219, 8%, 75%);
+    font-size: 0.938rem;
+    font-weight: 400;
+}
+.featured-img{
+    width: 200px;
+    margin: 1.5rem 0;
+    transition: 0.3s;
+}
+.featured-price{
+    font-size: 1rem;
+}
+.featured-button{
+    border: 2px solid transparent;
+    outline: none;
+    padding: 0.75rem 1rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 1rem 0 1rem 0;
+    cursor: pointer;
+}
+.featured-button i{
+    font-size: 1.25rem;
+}
+.featured-card:hover .featured-img{
+    transform: scale(1.05);
+}
+.active-featured{
+    background-color: #4178dc;
+    
+}
+.active-featured span, .active-featured img{
+    opacity: 1;
+}
