@@ -581,3 +581,135 @@ background-color: #4178dc;
 .active-featured span, .active-featured img{
     opacity: 1;
 }
+/*================================end featured======================================*/
+/*================================offer======================================*/
+.offer{
+    position: relative;
+}
+.offer-bg{
+    position: absolute;
+    object-position: center;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+   z-index: -1;
+}
+
+.offer-contnaner{
+    grid-template-columns: max-content 224px;
+}
+
+.offer-data{
+    text-align: center;
+}
+.offer-title{
+    margin-bottom: 2rem;
+}
+.offer-description{
+   
+    margin-bottom: 3rem;
+    text-wrap: wrap;
+}
+.offer-img{
+    position: relative;
+    width: 500px;
+    bottom: 5.5rem;
+    right: -5rem;
+}
+.offer-data{
+    margin: 0 2rem 5rem 1rem;
+}
+/*================================ end offer======================================*/
+/*================================logos======================================*/
+.logo-img{
+    width: 40px;
+    transition: 0.3s;
+    opacity: 0.4;
+}
+.logo-img:hover{
+    opacity: 1;
+}
+.logo-container{
+    grid-template-columns: repeat(3,max-content);
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding-bottom: 2rem;
+}
+/*================================end logos======================================*/
+/*================================footer=====================================*/
+.footer{
+    position: relative;
+    overflow: hidden;
+}
+.footer .shape-small{
+    position: absolute;
+   right:15rem;
+   bottom: -8rem;
+   z-index: -10000;
+}
+.footer .shape-big{
+    position: absolute;
+width: 300px;
+height: 300px;
+left: 12rem;
+top: 0rem;
+z-index: -10000;
+}
+.footer-container{
+    row-gap: 2.5rem;
+}
+
+.footer-logo a{
+ display: inline-flex;
+align-items: center;
+column-gap: 0.25rem;
+color: white;
+font-size: 1.25rem;
+font-weight:500 ;
+
+margin-bottom: 1.25rem;
+transition: 0.3s;
+}
+.footer-logo i{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.footer-logo a:hover{
+    color: #4178dc;
+}
+.footer-title{
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+}
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+.footer-link,.footer-social-link{
+    color: hsl(219, 8%, 75%);
+    transition: 0.3s;
+}
+.footer-link:hover,.footer-social-link:hover{
+    color: white;
+    cursor: pointer;
+    
+}
+.footer-social{
+    display: flex;
+    column-gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+.footer-social-link{
+    color: hsl(219, 8%, 75%);
+    font-size: 1rem;
+}
+.footer-copy{
+    display: block;
+    text-align: center;
+    margin-top: 4.5rem;
+
+}
