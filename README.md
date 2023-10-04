@@ -1,2 +1,2 @@
-# beat-car
+# Beta Electric Car
 beta car
