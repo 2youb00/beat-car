@@ -18,10 +18,10 @@
             <div class="nav-logo"> <a href="#"><i class="ri-steering-fill"></i> Xovzd</a></div>
             <div class="div-nav">
              <ul class="ul-nav">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#popular">Popular</a></li>
-                <li><a href="#featured">Featured</a></li>
+                <li><a href="#home" onclick="scrollhome()">Home</a></li>
+                <li><a href="#about" onclick="scrollabout()">About</a></li>
+                <li><a href="#popular" onclick="scrollpopular()">Popular</a></li>
+                <li><a href="#featured" onclick="scrollfeatured()">Featured</a></li>
              </ul>
              <div class="nav-close"><i class="ri-close-line"></i></div>
             </div>
@@ -61,6 +61,10 @@
                     </div>
                 </div>
                 <a href="#" class="home-button">START</a>
+                <audio id="car-start-sound" src="audio/videoplayback2 1550.mp3" >
+                  </audio>
+                  <audio id="car-open-sound" src="audio/videoplayback_3_[cut_1sec].mp3" >
+                </audio>
             </div>
         </section>
          <!---------------------------end home section---------------------------------->
@@ -216,7 +220,7 @@
                                 <i class="ri-gas-station-fill"></i> Gasoline 
                             </div>
                         </div>
-                        <h3 class="popular-price">DA350,000</h3>
+                        <h3 class="popular-price">DA3,500,000</h3>
                         <button class="button popular-button">
                             <i class="ri-shopping-bag-2-line"></i>
                         </button>

@@ -1,10 +1,10 @@
 /*    font-family: 'Exo', sans-serif;
 font-family: 'Poppins', sans-serif;
 font-family: 'Roboto', sans-serif;*/
-
-
-
-
+let startbtn=document.querySelector('.home-button')
+let startsound=document.getElementById('car-start-sound');
+let opensound=document.getElementById('car-open-sound');
+let startcartest=false
 
 
 
@@ -15,13 +15,16 @@ let divnav=document.querySelector('.div-nav');
 let navclose=document.querySelector('.nav-close');
 let navlinks=document.querySelectorAll('.ul-nav li a');
 toggle.addEventListener('click',()=>{
-divnav.style.right='0';
+    if(window.screen.width <= 767){
+divnav.style.right='0';}
 })
 navclose.addEventListener('click',()=>{
-    divnav.style.right='-100%';
+    if(window.screen.width <=767){
+    divnav.style.right='-100%';}
 })
 navlinks.forEach(navlink=>navlink.addEventListener('click',()=>{
-    divnav.style.right='-100%';
+    if(window.screen.width <= 767){
+    divnav.style.right='-100%';}
 }))
 ///////////////////////// end show menu and hidde//////////////////
 
@@ -80,3 +83,35 @@ activefeatured.forEach(active=>active.classList.remove('active-featured'))
 this.classList.add('active-featured');
 }
 activefeatured.forEach(active=>active.addEventListener('click',activefeaturedf));
+/*-------------------------------header scroll AND STARTBTN---------------------------------- */
+function scrollhome(){
+    window.scroll(0,0);
+    
+}
+function scrollabout(){
+    window.scroll(0,707.4000244140625);
+    
+}
+function scrollpopular(){
+    window.scroll(0,1296.900146484375);
+    
+}
+function scrollfeatured(){
+    window.scroll(0,2475.89990234375);
+    
+}
+
+startbtn.addEventListener('click',()=>{
+    setTimeout(scrollabout,1550);
+    if(!startcartest){
+        startbtn.style.background='hsl(156 ,89%, 30%)';
+    startsound.play();
+    startcartest=true;
+    }
+    
+})
+startbtn.addEventListener('contextmenu',()=>{
+    if(!startcartest){opensound.play();}
+    })
+/*-------------------------------END   header scroll---------------------------------- */
+

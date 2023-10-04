@@ -104,16 +104,16 @@ font-weight: 500;
     
 }
 @media screen and (max-width:767px){
-.div-nav{
-    position: fixed;
-    background-color: hsl(0, 0%,100%,0.1);
-    top: 0;
-    right:-100%;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(96px);
-    transition: 0.3s;
-}
+    .div-nav{
+        position: fixed;
+        background-color: hsl(0, 0%,100%,0.1);
+        top: 0;
+        right:-100%;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(96px);
+        transition: 0.3s;
+    }
 }
 .ul-nav{
     display: flex;
@@ -220,7 +220,7 @@ font-size: 1rem;
     font-size: 0.813rem;
     color: white;
     font-weight: 500;
-    transition: 5s;
+    transition: 3s;
 }
 .home-button::before{
     content: '';
@@ -233,9 +233,7 @@ font-size: 1rem;
     transition: 0.3s;
     animation: button 3s infinite;
 }
-.home-button:hover{
-    background-color: hsl(156 ,89%, 30%);
-}
+
 
 .shape-big,.shape-small{
     position: absolute;
@@ -254,6 +252,7 @@ font-size: 1rem;
 }
 50%{
     box-shadow: 0 0 24px hsl(156 ,98%, 43%);
+    
 }
 }
 /*--------------------changing background header with js--------------------*/
@@ -594,7 +593,7 @@ background-color: #4178dc;
     object-fit: cover;
     width: 100%;
     height: 100%;
-   z-index: -1;
+   z-index: -2;
 }
 
 .offer-contnaner{
@@ -621,6 +620,7 @@ background-color: #4178dc;
 .offer-data{
     margin: 0 2rem 5rem 1rem;
 }
+
 /*================================ end offer======================================*/
 /*================================logos======================================*/
 .logo-img{
@@ -712,4 +712,44 @@ transition: 0.3s;
     text-align: center;
     margin-top: 4.5rem;
 
+}
+/* -------------------------------------------si in pc------------------------/*/
+@media screen and (min-width:767px){
+    .div-nav{
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transition: 0.3s;
+        
+    }
+    .nav-logo{
+        display: flex;
+        align-items: center;
+        column-gap: 0.25rem;
+    
+    
+    }
+    .ul-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-right: -5rem;
+        align-items: center;
+        row-gap: 3rem;
+        padding-top: 1rem;
+}
+.ul-nav li a{
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.nav-close,.nav-toggle{
+    display: none;
+}
+.nav-logo{
+    display: flex;
+    flex-direction: row;
+    margin-right: 5rem;
+}
 }
