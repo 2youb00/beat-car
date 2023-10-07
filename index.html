@@ -12,7 +12,8 @@
   />
   <link rel="icon" href="img/electricity-icon-png-4545.png" type="image/x-icon">
     <body>
-    <!------------------------------header------------------------------->
+        <div class="preloader"><img class="loading-img" src="img/circle-loader.gif" alt="loading" width="40%"><img src="img/home.png" alt="loading" class="loading-car-img"></div>
+       
     <header class="header" id="header">
         <nav class="nav-container" id="nav-container">
             <div class="nav-logo"> <a href="#"><i class="ri-steering-fill"></i> Xovzd</a></div>
@@ -60,7 +61,7 @@
                         <h3 class="home-car-name">BATTERY</h3>
                     </div>
                 </div>
-                <a href="#" class="home-button">START</a>
+                <div class="home-div-button"><a href="#" class="home-button">START</a></div>
                 <audio id="car-start-sound" src="audio/videoplayback2 1550.mp3" >
                   </audio>
                   <audio id="car-open-sound" src="audio/videoplayback_3_[cut_1sec].mp3" >
@@ -94,7 +95,7 @@
             <h2 class="section-title">choose your electric car <br> of the porsche brand</h2>
             <div class="popular-container container swiper mySwiper"> 
                 <div class="swiper-wrapper">
-                    <article class="popular-card swiper-slide ">
+                    <article class="popular-card card swiper-slide ">
                         <div class="shape smaller-shape"></div>
                         <h1 class="popular-title">porshe</h1>
                         <h3 class="popular-subtitle">turbo s</h3>
@@ -110,13 +111,13 @@
                                 <i class="ri-charging-pile-line"></i> Electric
                             </div>
                         </div>
-                        <h3 class="popular-price">$175,900</h3>
-                        <button class="button popular-button">
+                        <h3 class="popular-price price">$175,900</h3>
+                        <button class="button popular-button" onclick="showinformation(this)">
                             <i class="ri-shopping-bag-2-line"></i>
                         </button>
                     </article> 
                    
-                    <article class="popular-card swiper-slide">
+                    <article class="popular-card card swiper-slide">
                         <div class="shape smaller-shape"></div>
                         <h1 class="popular-title">porshe</h1>
                         <h3 class="popular-subtitle">taycan</h3>
@@ -132,13 +133,13 @@
                                 <i class="ri-charging-pile-line"></i> Electric
                             </div>
                         </div>
-                        <h3 class="popular-price">$114,900</h3>
-                        <button class="button popular-button">
+                        <h3 class="popular-price price">$114,900</h3>
+                        <button class="button popular-button" onclick="showinformation(this)">
                             <i class="ri-shopping-bag-2-line"></i>
                         </button>
                     </article> 
                     
-                    <article class="popular-card swiper-slide">
+                    <article class="popular-card card swiper-slide">
                         <div class="shape smaller-shape"></div>
                         <h1 class="popular-title">porshe</h1>
                         <h3 class="popular-subtitle">turbo s cross</h3>
@@ -154,13 +155,13 @@
                                 <i class="ri-charging-pile-line"></i> Electric
                             </div>
                         </div>
-                        <h3 class="popular-price">$150,900</h3>
-                        <button class="button popular-button">
+                        <h3 class="popular-price price">$150,900</h3>
+                        <button class="button popular-button" onclick="showinformation(this)">
                             <i class="ri-shopping-bag-2-line"></i>
                         </button>
                     </article> 
                     
-                    <article class="popular-card swiper-slide">
+                    <article class="popular-card card swiper-slide">
                         <div class="shape smaller-shape"></div>
                         <h1 class="popular-title">porshe</h1>
                         <h3 class="popular-subtitle">boxster 718</h3>
@@ -176,13 +177,13 @@
                                 <i class="ri-charging-pile-line"></i> Electric
                             </div>
                         </div>
-                        <h3 class="popular-price">$125,900</h3>
-                        <button class="button popular-button">
-                            <i class="ri-shopping-bag-2-line"></i>
+                        <h3 class="popular-price price">$125,900</h3>
+                        <button class="button popular-button" onclick="showinformation(this)" >
+                            <i class="ri-shopping-bag-2-line" ></i>
                         </button>
                     </article> 
                     
-                    <article class="popular-card swiper-slide">
+                    <article class="popular-card card swiper-slide">
                         <div class="shape smaller-shape"></div>
                         <h1 class="popular-title">porshe </h1>
                         <h3 class="popular-subtitle">cayman</h3>
@@ -198,13 +199,13 @@
                                 <i class="ri-charging-pile-line"></i> Electric
                             </div>
                         </div>
-                        <h3 class="popular-price">$128,900</h3>
-                        <button class="button popular-button">
+                        <h3 class="popular-price price">$128,900</h3>
+                        <button class="button popular-button" onclick="showinformation(this)">
                             <i class="ri-shopping-bag-2-line"></i>
                         </button>
                     </article>
 
-                    <article class="popular-card swiper-slide">
+                    <article class="popular-card card swiper-slide">
                         <div class="shape smaller-shape"></div>
                         <h1 class="popular-title">peugeot </h1>
                         <h3 class="popular-subtitle">406</h3>
@@ -220,9 +221,9 @@
                                 <i class="ri-gas-station-fill"></i> Gasoline 
                             </div>
                         </div>
-                        <h3 class="popular-price">DA3,500,000</h3>
-                        <button class="button popular-button">
-                            <i class="ri-shopping-bag-2-line"></i>
+                        <h3 class="popular-price price">$25٬516</h3>
+                        <button class="button popular-button" onclick="showinformation(this)">
+                            <i class="ri-shopping-bag-2-line" ></i>
                         </button>
                     </article>
                 </div>
@@ -235,7 +236,7 @@
         </section>
         <!---------------------------popular end---------------------------------->
         <!---------------------------features---------------------------------->
-        <section class="features section">
+        <section class="features section sectionflex">
         <h2 class="section-title">More Features</h2>
         <div class="features-container container grid">
             <div class="features-group">
@@ -254,7 +255,7 @@
                 </div>
             </div>
         </div>
-          <img src="img/map.svg" alt="map" class="features-map">
+        <img src="img/map.svg" alt="map" class="features-map">
         </section>
         <!---------------------------end features---------------------------------->
          <!---------------------------featured---------------------------------->
@@ -277,61 +278,71 @@
                 </ul>
                 <div class="featured-content grid">
 
-                    <article class="featured-card mix tesla">
+                    <article class="featured-card card mix tesla featured-card1">
                         <div class="shape smaller-shape"></div>
                         <h1 class="featured-title">tesla</h1>
                         <h3 class="featured-subtitle">model x</h3>
                         <img src="img/featured1.png" alt="car" class="featured-img">
-                        <h3 class="featured-price">$98,900</h3>
-                        <button class="featured-button button"><i class="ri-shopping-bag-2-line"></i></button>
+                        <h3 class="featured-price price">$98,900</h3>
+                        <button class="featured-button button" onclick="showinformation(this)"><i class="ri-shopping-bag-2-line"></i></button>
                     </article>
 
-                    <article class="featured-card mix tesla">
+                    <article class="featured-card card mix tesla">
                         <div class="shape smaller-shape"></div>
                         <h1 class="featured-title">tesla</h1>
                         <h3 class="featured-subtitle">model 3</h3>
                         <img src="img/featured2.png" alt="car" class="featured-img">
-                        <h3 class="featured-price">$29,740</h3>
-                        <button class="featured-button button"><i class="ri-shopping-bag-2-line"></i></button>
+                        <h3 class="featured-price price">$29,740</h3>
+                        <button class="featured-button button" onclick="showinformation(this)"><i class="ri-shopping-bag-2-line"></i></button>
                     </article>
 
-                    <article class="featured-card mix audi">
+                    <article class="featured-card card mix audi">
                         <div class="shape smaller-shape"></div>
                         <h1 class="featured-title">audi</h1>
                         <h3 class="featured-subtitle">e-tron</h3>
                         <img src="img/featured3.png" alt="car" class="featured-img">
-                        <h3 class="featured-price">$175,900</h3>
-                        <button class="featured-button button"><i class="ri-shopping-bag-2-line"></i></button>
+                        <h3 class="featured-price price">$175,900</h3>
+                        <button class="featured-button button" onclick="showinformation(this)"><i class="ri-shopping-bag-2-line"></i></button>
                     </article>
 
-                    <article class="featured-card mix porsche">
+                    <article class="featured-card card mix porsche">
                         <div class="shape smaller-shape"></div>
                         <h1 class="featured-title">porsche </h1>
                         <h3 class="featured-subtitle">boxster 987</h3>
                         <img src="img/featured4.png" alt="car" class="featured-img">
-                        <h3 class="featured-price">$126,900</h3>
-                        <button class="featured-button button"><i class="ri-shopping-bag-2-line"></i></button>
+                        <h3 class="featured-price price">$126,900</h3>
+                        <button class="featured-button button" onclick="showinformation(this)"><i class="ri-shopping-bag-2-line"></i></button>
                     </article>
 
-                    <article class="featured-card mix porsche">
+                    <article class="featured-card card mix porsche">
                         <div class="shape smaller-shape"></div>
                         <h1 class="featured-title">porsche</h1>
                         <h3 class="featured-subtitle">panamera</h3>
                         <img src="img/featured5.png" alt="car" class="featured-img">
-                        <h3 class="featured-price">$126,900</h3>
-                        <button class="featured-button button"><i class="ri-shopping-bag-2-line"></i></button>
+                        <h3 class="featured-price price">$126,900</h3>
+                        <button class="featured-button button" onclick="showinformation(this)"><i class="ri-shopping-bag-2-line"></i></button>
                     </article>
-                    <article class="featured-card mix ">
+                    <article class="featured-card card mix audi">
+                        <div class="shape smaller-shape"></div>
+                        <h1 class="featured-title">audi</h1>
+                        <h3 class="featured-subtitle">e-tron gt quattro</h3>
+                        <img src="img/gt4.png" alt="car" class="featured-img">
+                        <h3 class="featured-price price">$40,600</h3>
+                        <button class="featured-button button" onclick="showinformation(this)"><i class="ri-shopping-bag-2-line"></i></button>
+                    </article>
+                    <article class="featured-card card mix ">
                         <div class="shape smaller-shape"></div>
                         <h1 class="featured-title">renault</h1>
                         <h3 class="featured-subtitle">captur dic</h3>
                         <img src="img/RENAULT CAPTUR (1).png" alt="car" class="featured-img">
-                        <h3 class="featured-price">DA 2,519,500</h3>
-                        <button class="featured-button button"><i class="ri-shopping-bag-2-line"></i></button>
+                        <h3 class="featured-price price">$18٬266</h3>
+                        <button class="featured-button button" onclick="showinformation(this)"><i class="ri-shopping-bag-2-line"></i></button>
                     </article>
                 </div>
             </div>
          </section>
+         <!---------------------------featured click---------------------------------->
+         
 
          <!---------------------------end featured---------------------------------->
     <!---------------------------offer---------------------------------->
@@ -409,7 +420,7 @@
             </ul>
         </div>
 
-        <div class="fotter-content">
+        <div class="fotter-content dd7">
             <h3 class="footer-title">Follow us</h3>
             <ul class="footer-social">
                 <a href="" target="_blank" class="footer-social-link">
@@ -474,6 +485,7 @@
 
    <script src="js/mixitup.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/scrollreveal.min.js"></script>
     <script src="js.js"></script>
   <!--  -->
 
