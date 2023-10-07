@@ -143,9 +143,15 @@ li{
     color: white;
 }
 .home-section{
-    overflow: hidden;
     position: relative;
     height: 100vh;
+    margin-bottom: 5rem;
+}
+@media screen and (min-height:730px){
+    .home-section{
+        overflow: hidden;
+        margin-bottom: 0;
+    }
 }
 .home-container{
     position: relative;

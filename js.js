@@ -94,16 +94,27 @@ function scrollhome(){
     
 }
 function scrollabout(){
+
     window.scroll(0,707.4000244140625);
+ 
     
 }
 function scrollpopular(){
-    window.scroll(0,1061.10009765625);
+    if(screen.width>=767){
+    window.scroll(0,1061.10009765625);}
+    else{
+        window.scroll(0,1372.500244140625);
+    }
+    
+    
     
 }
 function scrollfeatured(){
-    window.scroll(0,2193.10009765625);
-    
+    if(screen.width>=767){
+    window.scroll(0,2193.10009765625);}
+    else{
+        window.scroll(0,2595.000732421875);
+    }
 }
 
 startbtn.addEventListener('click',()=>{
@@ -248,17 +259,17 @@ const sr =ScrollReveal({
     origin:'top',
     distance:'60px',
     duration:2500,
-    delay: 400,
+    delay: 200,
     //reset:true
 })
 sr.reveal(`.home-title , .popular-container , .features-img , .featured-filters`)
-sr.reveal(`.home-subtitle`,{delay: 500})
-sr.reveal(`.home-elec`,{delay: 600})
-sr.reveal(`.home-img`,{delay: 800})
-sr.reveal(`.home-car-data`,{delay: 900 , interval:100, origin: 'bottom'})
-sr.reveal(`.home-div-button`,{delay: 1000 , origin: 'bottom'})
+sr.reveal(`.home-subtitle`,{delay: 300})
+sr.reveal(`.home-elec`,{delay: 400})
+sr.reveal(`.home-img`,{delay: 500})
+sr.reveal(`.home-car-data`,{delay: 600 , interval:100, origin: 'bottom'})
+sr.reveal(`.home-div-button`,{delay: 700 , origin: 'bottom'})
 sr.reveal(`.about-group ,.offer-data`,{origin: 'left'})
 sr.reveal(`.about-data ,.offer-img`,{origin: 'right'})
-sr.reveal(`.features-map`,{delay:600, origin: 'buttom'})
+sr.reveal(`.features-map`,{delay:400, origin: 'buttom'})
 sr.reveal(`.features-card`,{interval:300})
 sr.reveal(`.featured-card , .logo-content , .footer-content ,.fotter-content`,{interval:100})
