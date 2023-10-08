@@ -140,7 +140,7 @@ startbtn.addEventListener('contextmenu',()=>{
         }
     
         let about = document.querySelector('li a[href="#about"]');
-        if (scrollY >= 707.4000244140625 && scrollY < 1061.10009765625) {
+        if (scrollY >= 700.4000244140625 && scrollY < 1061.10009765625) {
             about.style.color = '#4178dc';
         } else {
             about.style.color = 'hsl(219, 8%, 95%)';
@@ -204,10 +204,10 @@ function showinformation(button) {
         
                 <div class="labelwitheinput">
                 <label class="information-label" for="firstName">Phone Number </label>
-                    <input type="tel" class="information-input" id="phoneNumber" name="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="+213669150661" >
+                    <input type="tel" class="information-input" id="phoneNumber" name="phoneNumber"pattern="\\+[0-9]{1,4}[0-9]{1,14}" placeholder="+213669150661" >
                     </div>
                     <div class="information-price">
-                        <input type="submit" value="Add" class="information-input information-submit">
+                    <button type="button" class="information-input information-submit" onclick="popoe()">Add</button>
                         <span class="information-price-value">${price}</span>
                     </div>
                 </form>
@@ -232,7 +232,7 @@ function closeinformation(button) {
       
    
 /* <div class="enter-information">
-                <form class="information-card" novalidate>
+                <form class="information-card" >
                     
                 <i class="ri-mail-close-line" onclick="closeinformation(this)"></i>
                     <h2 class="information-title">Buyer Form</h2>
@@ -243,11 +243,11 @@ function closeinformation(button) {
                     <label class="information-label" for="lastName">Last Name:</label>
                     <input type="text" class="information-input" id="lastName" name="lastName" required>
                 
-                    <label class="information-label" for="phoneNumber">Phone Number:</label>
-                    <input type="tel" class="information-input" id="phoneNumber" name="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="+213669150661" required>
+                    <label class="information-label" >Phone Number:</label>
+                    <input  class="information-input"   placeholder="+213669150661" >
                     <div class="information-price">
-                        <input type="submit" value="Add" class="information-input information-submit">
-                        <span class="information-price-value">${price}</span>
+                         <button  class="information-input information-submit" onclick="popoe()">Add</button>  
+                       <span class="information-price-value">${price}</span>
                     </div>
                 </form>
                 
@@ -273,3 +273,37 @@ sr.reveal(`.about-data ,.offer-img`,{origin: 'right'})
 sr.reveal(`.features-map`,{delay:400, origin: 'buttom'})
 sr.reveal(`.features-card`,{interval:300})
 sr.reveal(`.featured-card , .logo-content , .footer-content ,.fotter-content`,{interval:100})
+
+/*------------------popoe-------------/*/ 
+let onetime=true;
+let popoevar = document.querySelector('.popoe');
+let popoevar2 = document.querySelector('.popoe2');
+function popoe(){
+let isphonenumbertrue=document.getElementById('phoneNumber');
+const pattern = /\+[0-9]{0,4}[0-9]{10}/;
+const userInput = isphonenumbertrue.value;
+const isMatching = pattern.test(userInput);
+if (isMatching) {
+    popoevar.classList.remove('displaynone');
+    setTimeout(closepopoe,3000,popoevar);
+} else {
+    popoevar2.classList.remove('displaynone');
+    setTimeout(closepopoe,3000,popoevar2);
+}
+
+}
+function closepopoe(popoevar) {
+    let opacitytest = 1;
+    function reduceOpacity() {
+        opacitytest = opacitytest - 0.1; 
+        popoevar.style.opacity = `${opacitytest.toFixed(1)}`; 
+        if (opacitytest > 0 && onetime) {
+            setTimeout(reduceOpacity, 50); } 
+        else {
+            popoevar.classList.add('displaynone');
+            popoevar2.classList.add('displaynone');onetime=false;
+        }
+    }
+
+    reduceOpacity(); 
+}

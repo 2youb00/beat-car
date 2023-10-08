@@ -73,7 +73,7 @@ nav a{
     left: 0;
     top: 0;
     z-index: 10;
-    padding: 0.8rem 0.8rem;
+    padding: 0.8rem 0.8rem; 
 }
 .nav-container{
     display: flex;
@@ -657,6 +657,7 @@ background-color: #4178dc;
     cursor: pointer;
     position: relative;
     padding: 5px;
+   
     
 }
 .information-price {
@@ -845,6 +846,48 @@ transition: 0.3s;
     width: 3%;
 }
 }
+
+/*-------------------popope------------/*/
+.popoe,.popoe2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:#4178dc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    position: fixed;
+    top: 30rem;
+    left: 0;    
+    z-index: 100010122331;
+    color: white;
+    animation: popoe 2s 1;
+}
+
+
+.ri-mail-check-fill,.ri-mail-close-fill{
+    font-size: 1.25rem;
+    z-index: 1;
+    margin: 1rem;
+ }
+ @keyframes popoe{
+     0%{
+       opacity: 0;
+     }
+     100%{
+         opacity: 1;
+     }
+ }
+ .displaynone{
+     display: none;
+ }
+ .popoe2{
+     background-color:#e73737;
+     z-index: 1000;
+ }
+ 
+ 
 /* -------------------------------------------si in pc------------------------/*/
 @media screen and (min-width:767px){
     .div-nav{
@@ -964,9 +1007,11 @@ transition: 0.3s;
     border-radius: 1rem;
    
     }
-
-
-
+/*-------------------popope------------/*/
+.popoe,.popoe2{
+   width: 400px;
+}
+   
 
 
 
