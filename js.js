@@ -179,7 +179,7 @@ window.addEventListener('load',()=>{
 
 
 
-/*--------------------------------------------------*-*/
+/*-------------------------------showinformation-------------------*-*/
 let featuredcards = document.querySelectorAll('.featured-card');
 let origencod;
 let test = true;
@@ -220,7 +220,7 @@ function showinformation(button) {
             card.style.padding = '0.6rem 1rem';
         }
     }
-}
+}   
 
 function closeinformation(button) {
     let card = button.closest('.card');
@@ -228,32 +228,54 @@ function closeinformation(button) {
     card.style.padding = '2rem 1.5rem 1.5rem';
     test = true;
 }
+function fleps(button){
+    let card = button.closest('.card');
+    card.style.cssText='animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both';
+
+}
+
 
       
-   
-/* <div class="enter-information">
-                <form class="information-card" >
-                    
-                <i class="ri-mail-close-line" onclick="closeinformation(this)"></i>
-                    <h2 class="information-title">Buyer Form</h2>
-                
-                    <label class="information-label" for="firstName">First Name:</label>
-                    <input type="text" class="information-input" id="firstName" name="firstName" required>
-                
-                    <label class="information-label" for="lastName">Last Name:</label>
-                    <input type="text" class="information-input" id="lastName" name="lastName" required>
-                
-                    <label class="information-label" >Phone Number:</label>
-                    <input  class="information-input"   placeholder="+213669150661" >
-                    <div class="information-price">
-                         <button  class="information-input information-submit" onclick="popoe()">Add</button>  
-                       <span class="information-price-value">${price}</span>
-                    </div>
-                </form>
-                
-                </div>
-    
-/**/ 
+/*-------------------------------end showinformation-------------------*-*/
+/**---------------------------------know more buttn------------------ */
+let aboutbtn=document.querySelector('.about-section .button');
+let aboutdescription=document.querySelector('.about-data-description');
+let testbtn=true;
+aboutbtn.addEventListener('click',()=>{
+    if(testbtn){
+ aboutdescription.innerHTML=`
+ See the future with high-performance 
+ electric cars produced by renowned brands. They feature futuristic 
+ builds and designs with new and innovative platforms that last a long time <br>
+
+ <div class="about-data-description-part2">Step into the future with high-performance electric cars from renowned brands
+ . These vehicles redefine excellence and offer a sustainable driving experience. With triple the innovation, style,
+  and eco-friendliness, they're not just cars but a bridge to a greener tomorrow. Explore cutting-edge technology,
+  sleek designs, and a silent drive that propels you effortlessly.
+  Buckle up for a future where every journey is a step towards a more sustainable and electrifying world.</div><img src="img/design2.png" alt="electric car" class="know-more-img">
+ `;
+ aboutbtn.innerHTML="Know Less <i class='ri-arrow-up-line'></i>";testbtn=false;
+ if(screen.width>767){
+    aboutbtn.classList.add('button-know-less-position');
+        document.querySelector('.about-card').style.visibility='hidden'; 
+        document.querySelector('.know-more-description').classList.remove('displaynone');
+  }
+
+ 
+}
+else{
+    aboutdescription.innerHTML=`
+See the future with high-performance 
+electric cars produced by renowned brands. They feature futuristic 
+builds and designs with new and innovative platforms that last a long time
+    `;
+    aboutbtn.innerHTML="Know More <i class='ri-arrow-down-line'></i> ";testbtn=true;
+    document.querySelector('.about-card').style.visibility='visible';
+    document.querySelector('.know-more-description').classList.add('displaynone');
+    aboutbtn.classList.remove('button-know-less-position');
+}
+})
+
 /*--------------------scroll revealanimatoin------------ */
 const sr =ScrollReveal({
     origin:'top',
@@ -273,6 +295,13 @@ sr.reveal(`.about-data ,.offer-img`,{origin: 'right'})
 sr.reveal(`.features-map`,{delay:400, origin: 'buttom'})
 sr.reveal(`.features-card`,{interval:300})
 sr.reveal(`.featured-card , .logo-content , .footer-content ,.fotter-content`,{interval:100})
+
+aboutbtn.addEventListener('click',()=>{
+    sr.reveal(`.about-data-description-part2`,{ distance:'10px'})
+    sr.reveal(`.know-more-description`,{delay: 300})
+    sr.reveal(`.know-more-img`,{delay: 400 ,origin: 'right'})}
+   
+)
 
 /*------------------popoe-------------/*/ 
 let onetime=true;
@@ -307,3 +336,7 @@ function closepopoe(popoevar) {
 
     reduceOpacity(); 
 }
+
+
+
+/*------------------end popoe-------------/*/ 
